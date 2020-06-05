@@ -95,7 +95,7 @@ const locationData = [
       lat: 40.463,
       lng: -3.749,
     },
-    cities: ['Barcelnga', 'Girona'],
+    cities: ['Barcelona', 'Girona'],
     years: [2007, 2012]
   },
   {
@@ -153,12 +153,21 @@ const locationData = [
     years: ['2014'],
   },
   {
+    country: 'Mexico',
+    location: {
+      lat: 23.634,
+      lng: -102.552,
+    },
+    cities: ['Cancun, Merida'],
+    years: ['2006'],
+  },
+  {
     country: 'Botswana',
     location: {
       lat: -22.328,
       lng: 24.68,
     },
-    cities: ['Palapye'],
+    cities: ['Bobonong'],
     years: ['2010'],
   },
   {
@@ -212,7 +221,7 @@ const locationData = [
       lat: 14.058,
       lng: 108.277,
     },
-    cities: ['Ho Chi Minh City', 'Duong Dong', 'Hanoi', 'Bai Tu lngg Bay', 'Sapa', 'Ban Ho'],
+    cities: ['Ho Chi Minh City', 'Duong Dong', 'Hanoi', 'Bai Tu Long Bay', 'Sapa', 'Ban Ho'],
     years: ['2020'],
   },
   {

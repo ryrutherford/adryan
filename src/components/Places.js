@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import locationData from './LocationData.js';
 
 const containerStyle = {
-  width: '75%',
+  width: '90%',
   height: 500,
   margin: '10px',
 };
