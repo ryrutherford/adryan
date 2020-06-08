@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     width: '50%',
     margin: '0 auto',
   },
-  text: {
+  body: {
     width: '75%',
     margin: '0 auto',
   },
@@ -56,8 +56,8 @@ const About = () => {
 
   return ( 
     <div className={classes.root}>
+      <Typography variant='h3' color='primary'>About Me</Typography>
       <div className={classes.about}>
-        <Typography variant='h3' color='primary'>About Me</Typography>
         <Typography variant='body1' color='textPrimary'>
           I'm a {getAge()} year old student studying Computer Science and Musical Science and Technology at McGill University.
           Between coursework and running the non-profit <MuiLink href='https://www.facebook.com/suitsumontreal/' rel='noopener noreferrer' target='_blank'>Suits U Montreal</MuiLink>, 
@@ -67,9 +67,9 @@ const About = () => {
         </Typography>
       </div>
       <Box m={3}/>
-      <Divider variant='inset' className={classes.text}/>
+      <Divider variant='inset' className={classes.body}/>
       <Box m={4}/>
-      <div className={classes.text}>
+      <div className={classes.body}>
         <ExpansionPanel>
           <ExpansionPanelSummary
             expandIcon={<ExpandMoreIcon color='primary'/>}
