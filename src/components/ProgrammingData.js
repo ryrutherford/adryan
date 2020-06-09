@@ -12,10 +12,14 @@ import MYSQLLOGO from '../res/logos/mysql_logo.png';
 import FBLOGO from '../res/logos/fb_logo.png';
 import BASHLOGO from '../res/logos/bash_logo.jpg';
 import SONGREQUEST from '../res/project_photos/pts/song_request.jfif';
+import PTS from '../res/project_photos/pts/PlayThatSong.mp4';
 import SPYFALL from '../res/project_photos/spyfall/spyfall.png';
+import S from '../res/project_photos/spyfall/Spyfall.mp4';
 import TICTACTOE from '../res/project_photos/ttt/tictactoe.jpeg';
+import TTT from '../res/project_photos/ttt/TicTacToe.mp4';
 import ADRYAN from '../res/project_photos/adryan/adryan.jpg';
 import SHADOWDEFEND from '../res/project_photos/sd/shadow_defend.png';
+import SD from '../res/project_photos/sd/ShadowDefend.mp4';
 
 export const programmingLanguages = [
   {
@@ -79,7 +83,6 @@ export const projectData = [
   {
     title: 'Play That Song',
     titleImg: SONGREQUEST,
-    body: '',
     github: 'https://github.com/ryrutherford/play-that-song',
     link: 'https://play-that-song-fac18.firebaseapp.com/about',
     languages: [
@@ -100,12 +103,11 @@ export const projectData = [
         img: FBLOGO
       },
     ],
-    video: '',
+    video: PTS,
   },
   {
     title: 'Spyfall',
     titleImg: SPYFALL,
-    body: '',
     github: 'https://github.com/ryrutherford/spyfall',
     languages: [
       {
@@ -121,12 +123,11 @@ export const projectData = [
         img: FBLOGO
       },
     ],
-    video: '',
+    video: S,
   },
   {
     title: 'Tic Tac Toe',
     titleImg: TICTACTOE,
-    body: '',
     github: 'https://github.com/ryrutherford/TicTacToeWebApp',
     link: 'http://tictactoe-env.pbe2cumsqb.us-east-2.elasticbeanstalk.com/',
     languages: [
@@ -139,13 +140,12 @@ export const projectData = [
         img: CSSLOGO
       },
     ],
-    video: '',
+    video: TTT,
   },
   //TODO: move shadow defend to github
   {
     title: 'Shadow Defend',
     titleImg: SHADOWDEFEND,
-    body: '',
     github: '',
     languages: [
       {
@@ -153,12 +153,12 @@ export const projectData = [
         img: JAVALOGO
       },
     ],
-    video: '',
+    video: SD,
   },
   {
     title: 'Personal Website',
     titleImg: ADRYAN,
-    body: '',
+    body: 'You\'re here now so I don\'t think you need a video but I\'ll quickly explain some of the tools I used to build this website. The website was built using JavaScript and the React library and deployed to Firebase. I used MaterialUI as the UI framework and a lot of the design comes from their base components. I used a few API\'s to make it easier to maintain the website and update it without having to redeploy. The photos on the Home page are fetched from the Imgur API, the Google Maps API was used to show the places I\'ve visited in the About section, and the YouTube API was used to display some of my recents beats/tracks in the Music section.',
     github: 'https://github.com/ryrutherford/adryan',
     languages: [
       {

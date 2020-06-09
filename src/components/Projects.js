@@ -37,7 +37,24 @@ const Projects = () => {
   return (
     <div className={classes.root}>
       <PageInfo title={title} body={body}/>
-      <div className={classes.body}>        
+      <div className={classes.body}>                
+        <Grid
+          container
+          direction="row"
+          justify="flexStart"
+          spacing={3}
+        >
+        {
+            projectData.map((project, index) => {
+              return (
+                <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
+                  <ProjectInfo project={project}/>
+                </Grid>
+              )
+            })
+          }
+        </Grid>
+        <Box m={3}/>
         <Grid
           container
           direction="row"
@@ -57,23 +74,6 @@ const Projects = () => {
             </Typography>
             <ChipList chiplist={tooling} elevation={1}/>            
           </Grid>
-        </Grid>
-        <Box m={3}/>
-        <Grid
-          container
-          direction="row"
-          justify="flexStart"
-          spacing={3}
-        >
-        {
-            projectData.map((project, index) => {
-              return (
-                <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
-                  <ProjectInfo project={project}/>
-                </Grid>
-              )
-            })
-          }
         </Grid>
       </div>
     </div>

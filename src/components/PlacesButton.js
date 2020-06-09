@@ -13,7 +13,7 @@ import Places from './Places.js'
 const PlacesButton = ({width}) => {
 
   /**
-   * function to determine screen size breakpoint used to determin full screen size
+   * function to determine screen size breakpoint used to determine full screen size
    */
   const getFullScreenBrk = () => {
     if (isWidthUp('xl', width)) {

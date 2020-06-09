@@ -15,14 +15,14 @@ const center = {
   lng: 30,
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     overflow: 'hidden',
   },
-}));
+});
 
 /**
  * The Places component returns a GoogleMap with Markers on it for each location I've visited
