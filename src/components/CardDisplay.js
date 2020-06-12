@@ -39,7 +39,7 @@ const useStyles = makeStyles({
   }
 });
 
-const ProjectInfo = ({project, width}) => {
+const CardDisplay = ({data, width}) => {
 
   /**
    * function to determine screen size breakpoint used to determine full screen size
@@ -80,48 +80,52 @@ const ProjectInfo = ({project, width}) => {
       <Card className={classes.card}>
           <CardMedia
             className={classes.media}
-            image={project.titleImg}
-            title={project.title}
+            image={data.titleImg}
+            title={data.title}
           />      
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {project.link ? <Link href={project.link} rel='noopener noreferrer' target='_blank' color='textPrimary'>{project.title}</Link> : project.title}
+              {data.link ? <Link href={data.link} rel='noopener noreferrer' target='_blank' color='textPrimary'>{data.title}</Link> : data.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              <ChipList chiplist={project.languages} elevation={0}/>
-            </Typography>
+            {data.languages ? 
+              <Typography variant="body2" color="textSecondary" component="p">
+                <ChipList chiplist={data.languages} elevation={0}/>
+              </Typography>
+              :
+              null
+            }
           </CardContent>      
         <CardActions>
           <Button size="small" color="primary" onClick={handleClickOpen}>
-            Learn More
+            {data.languages ? 'Learn More' : 'Watch Video'}
           </Button>
           <Button size="small" color="primary">
-            <Link href={project.github} rel='noopener noreferrer' target='_blank'>Github</Link>
+            {data.github ? <Link href={data.github} rel='noopener noreferrer' target='_blank'>Github</Link> : null}
           </Button>
         </CardActions>
       </Card>
       <Dialog
-        fullScreen={project.video ? fullScreen : false}
+        fullScreen={data.video ? fullScreen : false}
         open={open}
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle id="responsive-dialog-title">{project.title}</DialogTitle>
+        <DialogTitle id="responsive-dialog-title">{data.title}</DialogTitle>
         <DialogContent>
-          {project.body ? 
+          {data.body ? 
             <DialogContentText className={classes.body}>
-              {project.body}
+              {data.body}
             </DialogContentText>
             :
             null
           }
           <div className={classes.video}>
-          {project.video ? 
+          {data.video ? 
             <ReactPlayer 
-              url={project.video}
+              url={data.video}
               controls
-              width='65%'
-              height='65%'
+              width={data.languages ? '65%' : '65%'}
+              height={data.languages ? '65%' : '450px'}
               /> : null}
           </div>
         </DialogContent>
@@ -137,4 +141,4 @@ const ProjectInfo = ({project, width}) => {
  
 
 
-export default withWidth()(ProjectInfo);
+export default withWidth()(CardDisplay);

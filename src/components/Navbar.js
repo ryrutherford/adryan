@@ -15,6 +15,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import {withRouter} from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import MuiLink from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 
 const drawerWidth = 240;
@@ -114,10 +115,15 @@ const Navbar = () => {
         </div>
         <Divider />
         <List>
-          {['About', 'Projects', 'Music', 'Contact'].map((text) => (
-            <ListItem key={text} button component={Link} to={'/' + text.toLowerCase()} onClick={handleDrawerClose}>
-              <ListItemText primary={text}/>
-            </ListItem>
+          {['About', 'Projects', 'Music', 'Resume'].map((text) => (
+            text !== 'Resume' ? 
+              <ListItem key={text} button component={Link} to={'/' + text.toLowerCase()} onClick={handleDrawerClose}>
+                <ListItemText primary={text}/>
+              </ListItem>
+              :
+              <ListItem key={text} button onClick={handleDrawerClose}>
+                <MuiLink underline='none' color='inherit' href='https://drive.google.com/file/d/1cdRN2o_V4u7oPKcqNiD2I_pkZfl5zoRA/view?usp=sharing' target='_blank' rel='noopener noreferrer'><ListItemText primary={text}/></MuiLink>
+              </ListItem>
           ))}
         </List>
       </Drawer>

@@ -2,7 +2,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
-import SQUAT from '../res/squat.gif';
 import { Link } from 'react-router-dom';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
   },
   about: {
-    width: '50%',
+    width: '75%',
     margin: '0 auto',
   },
   body: {
@@ -112,9 +111,6 @@ const About = () => {
                 <Typography>
                   After quitting soccer in 2016 I needed a way to stay in shape and after discovering Jim Wendler's 5/3/1 program I have stuck to it ever since.            
                 </Typography>
-              </Grid>
-              <Grid item>
-                <img src={SQUAT} alt='Me Squatting' className={classes.gif}/>
               </Grid>
             </Grid>
           </ExpansionPanelDetails>

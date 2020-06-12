@@ -46,7 +46,7 @@ const Photos = ({photos, width}) => {
     <div className={classes.root}>
       <GridList cellHeight={400} cols={getGridListCols()} className={classes.gridList}>
         <GridListTile key="Subheader" cols={getGridListCols()} style={{ height: 'auto' }}>
-          <ListSubheader component="div">Some photos of my recent travels</ListSubheader>
+          <ListSubheader component="div">Some of my recent photos</ListSubheader>
         </GridListTile>
         {photos !== [] && photos.map((tile) => (
           <GridListTile key={tile.id}>

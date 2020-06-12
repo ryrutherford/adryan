@@ -11,15 +11,6 @@ import FLUTTERLOGO from '../res/logos/flutter_logo.png';
 import MYSQLLOGO from '../res/logos/mysql_logo.png';
 import FBLOGO from '../res/logos/fb_logo.png';
 import BASHLOGO from '../res/logos/bash_logo.jpg';
-import SONGREQUEST from '../res/project_photos/pts/song_request.jfif';
-import PTS from '../res/project_photos/pts/PlayThatSong.mp4';
-import SPYFALL from '../res/project_photos/spyfall/spyfall.png';
-import S from '../res/project_photos/spyfall/Spyfall.mp4';
-import TICTACTOE from '../res/project_photos/ttt/tictactoe.jpeg';
-import TTT from '../res/project_photos/ttt/TicTacToe.mp4';
-import ADRYAN from '../res/project_photos/adryan/adryan.jpg';
-import SHADOWDEFEND from '../res/project_photos/sd/shadow_defend.png';
-import SD from '../res/project_photos/sd/ShadowDefend.mp4';
 
 export const programmingLanguages = [
   {
@@ -82,7 +73,7 @@ export const tooling = [
 export const projectData = [
   {
     title: 'Play That Song',
-    titleImg: SONGREQUEST,
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693179/adryan/PlayThatSong/song_request_ngwfzj.jpg',
     github: 'https://github.com/ryrutherford/play-that-song',
     link: 'https://play-that-song-fac18.firebaseapp.com/about',
     languages: [
@@ -103,11 +94,11 @@ export const projectData = [
         img: FBLOGO
       },
     ],
-    video: PTS,
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693197/adryan/PlayThatSong/PlayThatSong_og1fdy.mp4',
   },
   {
     title: 'Spyfall',
-    titleImg: SPYFALL,
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693142/adryan/Spyfall/spyfall_mxysj1.png',
     github: 'https://github.com/ryrutherford/spyfall',
     languages: [
       {
@@ -123,11 +114,11 @@ export const projectData = [
         img: FBLOGO
       },
     ],
-    video: S,
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693157/adryan/Spyfall/Spyfall_n0ekug.mp4',
   },
   {
     title: 'Tic Tac Toe',
-    titleImg: TICTACTOE,
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693280/adryan/TicTacToe/tictactoe_cfyvbk.jpg',
     github: 'https://github.com/ryrutherford/TicTacToeWebApp',
     link: 'http://tictactoe-env.pbe2cumsqb.us-east-2.elasticbeanstalk.com/',
     languages: [
@@ -140,12 +131,12 @@ export const projectData = [
         img: CSSLOGO
       },
     ],
-    video: TTT,
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693287/adryan/TicTacToe/TicTacToe_uogbsj.mp4',
   },
   //TODO: move shadow defend to github
   {
     title: 'Shadow Defend',
-    titleImg: SHADOWDEFEND,
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693217/adryan/ShadowDefend/shadow_defend_fqbbjf.png',
     github: '',
     languages: [
       {
@@ -153,11 +144,11 @@ export const projectData = [
         img: JAVALOGO
       },
     ],
-    video: SD,
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693234/adryan/ShadowDefend/ShadowDefend_w1rvqx.mp4',
   },
   {
     title: 'Personal Website',
-    titleImg: ADRYAN,
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693250/adryan/Adryan/adryan_bxsjuw.jpg',
     body: 'You\'re here now so I don\'t think you need a video but I\'ll quickly explain some of the tools I used to build this website. The website was built using JavaScript and the React library and deployed to Firebase. I used MaterialUI as the UI framework and a lot of the design comes from their base components. I used a few API\'s to make it easier to maintain the website and update it without having to redeploy. The photos on the Home page are fetched from the Imgur API, the Google Maps API was used to show the places I\'ve visited in the About section, and the YouTube API was used to display some of my recents beats/tracks in the Music section.',
     github: 'https://github.com/ryrutherford/adryan',
     languages: [

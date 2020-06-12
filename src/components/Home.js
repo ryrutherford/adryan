@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import MuiLink from '@material-ui/core/Link';
 import axios from 'axios';
 import Photos from './Photos.js';
 import Divider from '@material-ui/core/Divider';
@@ -50,7 +51,6 @@ const Home = () => {
           headers: { 'authorization': 'Client-ID ' + process.env.REACT_APP_IMGUR_KEY }
         })
           .then((res) => {
-            console.log(res.data.data);
             const photos = res.data.data.map((photo) => {
               return {
                 id: photo.id,
@@ -94,8 +94,8 @@ const Home = () => {
               </Button>
             </Grid>
             <Grid item>
-              <Button variant="contained" component={Link} to='/contact' color='primary' className={classes.button}>
-                Contact
+              <Button variant="contained" color='primary' className={classes.button}>
+                <MuiLink underline='none' color='inherit' href='https://drive.google.com/file/d/1cdRN2o_V4u7oPKcqNiD2I_pkZfl5zoRA/view?usp=sharing' target='_blank' rel='noopener noreferrer'>Resume</MuiLink>
               </Button>
             </Grid>
           </Grid>

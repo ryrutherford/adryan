@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import { programmingLanguages, tooling } from './ProgrammingData.js';
 import ChipList from './ChipList.js';
-import ProjectInfo from './ProjectInfo.js';
+import CardDisplay from './CardDisplay.js';
 import {projectData} from './ProgrammingData.js';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,7 @@ const Projects = () => {
 
   const classes = useStyles();
 
-  const body = 'I started university as a Business major but after taking an introduction to programming class in my second semester of university I knew that I needed to switch programs. Nearing the end of my second year I started working on my own projects, primarily in Java which was the first language I learned. Recently, I have picked up JavaScript and developed a passion for web design. I also tried my hand at mobile development after learning Dart and Flutter.';
+  const body = 'I always had an interest in programming but was too scared to try it out. It wasn\'t until my second semester in McGill\'s Faculty of Management that I took a programming course. Ever since then I\'ve gained a love for building things with code and spent two years changing faculties so I could pursue this passion. Ever since then, I\'ve worked on a variety of projects related to my interests. Check out some of them below!';
   const title = 'Projects and Skills';
 
   return (
@@ -48,7 +48,7 @@ const Projects = () => {
             projectData.map((project, index) => {
               return (
                 <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
-                  <ProjectInfo project={project}/>
+                  <CardDisplay data={project}/>
                 </Grid>
               )
             })

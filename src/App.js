@@ -9,7 +9,6 @@ import Home from './components/Home.js';
 import About from './components/About.js';
 import Navbar from './components/Navbar.js';
 import Music from './components/Music.js';
-import Contact from './components/Contact.js';
 import Projects from './components/Projects.js';
 import './App.css';
 
@@ -23,7 +22,6 @@ function App() {
           <Route path="/about" component={About}/>
           <Route path="/music" component={Music}/>
           <Route path="/projects" component={Projects}/>
-          <Route path="/contact" component={Contact}/>
           <Route render={() => <Redirect to={{pathname: "/"}} />} />
         </Switch>
       </div>

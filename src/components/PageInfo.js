@@ -5,10 +5,6 @@ import Divider from '@material-ui/core/Divider';
 import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
-  about: {
-    width: '50%',
-    margin: '0 auto',
-  },
   body: {
     width: '75%',
     margin: '0 auto',
@@ -22,7 +18,7 @@ const PageInfo = ({title, body}) => {
   return (
     <>
       <Typography variant='h3' color='primary' align='center'>{title}</Typography>
-      <div className={classes.about}>
+      <div className={classes.body}>
         <Typography variant='body1' color='textPrimary'>
           {body}
         </Typography>
