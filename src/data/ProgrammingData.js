@@ -127,6 +127,10 @@ export const projectData = [
         img: JAVALOGO
       },
       {
+        data: 'JavaScript',
+        img: JSLOGO
+      },
+      {
         data: 'CSS',
         img: CSSLOGO
       },

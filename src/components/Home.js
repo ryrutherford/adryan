@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import MuiLink from '@material-ui/core/Link';
 import axios from 'axios';
-import Photos from './Photos.js';
+import Photos from './display/Photos.js';
 import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({

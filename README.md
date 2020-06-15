@@ -1,12 +1,3 @@
 # My Personal Website
 
-## May 30th, 2020
-
-- The project has been set up
-- I've connected with the Imgur API to display some photos from my recent travels
-- The home page and routing has been set up
-
-## Jun 5th, 2020
-
-- The about page has been set up
-- Connected with the Google Maps API to display a map of the places I've visited
+The website was built using JavaScript and the React library and deployed to Firebase. I used MaterialUI as the UI framework and a lot of the design comes from their base components. I used a few API's to make it easier to maintain the website and update it without having to redeploy. The photos on the Home page are fetched from the Imgur API, the Google Maps API was used to show the places I've visited in the About section, and the YouTube API was used to display some of my recents beats/tracks in the Music section.

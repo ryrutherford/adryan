@@ -6,10 +6,10 @@ import {
   Redirect
 } from 'react-router-dom';
 import Home from './components/Home.js';
-import About from './components/About.js';
+import About from './components/routes/About.js';
 import Navbar from './components/Navbar.js';
-import Music from './components/Music.js';
-import Projects from './components/Projects.js';
+import Music from './components/routes/Music.js';
+import Projects from './components/routes/Projects.js';
 import './App.css';
 
 function App() {

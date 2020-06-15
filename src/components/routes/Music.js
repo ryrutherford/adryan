@@ -1,10 +1,9 @@
 import React, { useEffect, useState }from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-///import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
-import PageInfo from './PageInfo.js';
-import CardDisplay from './CardDisplay.js';
+import PageInfo from '../display/PageInfo.js';
+import CardDisplay from '../display/CardDisplay.js';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,14 +53,15 @@ const Music = () => {
               params: {
                 part: 'snippet,player',
                 id: videoIDs.join(','),
-                maxResult: 6,
+                maxResult: 10,
                 key: process.env.REACT_APP_GOOGLE_API_KEY,
               },
             })
               .then((response) => {
+                console.log(response);
                 const videoInfo = response.data.items.map((item) => {
                   return {
-                    titleImg: item.snippet.thumbnails.maxres.url,
+                    titleImg: item.snippet.thumbnails.maxres ? item.snippet.thumbnails.maxres.url : item.snippet.thumbnails.high.url ,
                     title: item.snippet.title.split(' - ')[0],
                     video: 'https://www.youtube.com/watch?v=' + item.id,
                   }
@@ -85,20 +85,21 @@ const Music = () => {
       <Grid
           container
           direction="row"
-          justify="flexStart"
+          justify="flex-start"
           spacing={3}
         >
         {
           videos !== [] ?
             videos.map((video, index) => {
               return (
-                <Grid item xs={12} sm={6} key={index} className={classes.gridItem}>
+                <Grid item xs={12} sm={6} key={index}>
                   <CardDisplay data={video}/>
                 </Grid>
               )
             })
             :
-            null
+            <Grid item>
+            </Grid>
         }
         </Grid>
       </div>

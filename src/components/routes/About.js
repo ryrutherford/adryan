@@ -9,7 +9,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
-import PlacesButton from './PlacesButton.js';
+import PlacesButton from '../places/PlacesButton.js';
 import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
@@ -75,7 +75,7 @@ const About = () => {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography variant='h5' color='primary'>DJing Makes Me Smile</Typography>
+            <Typography variant='h5' color='primary'>DJing makes me smile</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
@@ -89,7 +89,7 @@ const About = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography variant='h5' color='primary'>I Like to Go Fast</Typography>
+            <Typography variant='h5' color='primary'>I like to go fast</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Typography>
@@ -103,7 +103,7 @@ const About = () => {
             aria-controls="panel3a-content"
             id="panel3a-header"
           >
-            <Typography variant='h5' color='primary'>5/3/1 Keeps Me Strong</Typography>
+            <Typography variant='h5' color='primary'>5/3/1 keeps me strong</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container direction='column' spacing={0} alignItems='center'>
@@ -121,7 +121,7 @@ const About = () => {
             aria-controls="panel4a-content"
             id="panel4a-header"
           >
-            <Typography variant='h5' color='primary'>I Want to Travel the World</Typography>
+            <Typography variant='h5' color='primary'>I want to travel the world</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container direction='column' spacing={0} alignItems='center'>

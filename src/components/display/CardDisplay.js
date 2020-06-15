@@ -88,11 +88,9 @@ const CardDisplay = ({data, width}) => {
               {data.link ? <Link href={data.link} rel='noopener noreferrer' target='_blank' color='textPrimary'>{data.title}</Link> : data.title}
             </Typography>
             {data.languages ? 
-              <Typography variant="body2" color="textSecondary" component="p">
-                <ChipList chiplist={data.languages} elevation={0}/>
-              </Typography>
+              <ChipList chiplist={data.languages} elevation={0}/>
               :
-              null
+              <></>
             }
           </CardContent>      
         <CardActions>
@@ -100,7 +98,7 @@ const CardDisplay = ({data, width}) => {
             {data.languages ? 'Learn More' : 'Watch Video'}
           </Button>
           <Button size="small" color="primary">
-            {data.github ? <Link href={data.github} rel='noopener noreferrer' target='_blank'>Github</Link> : null}
+            {data.github ? <Link href={data.github} rel='noopener noreferrer' target='_blank'>Github</Link> : <></>}
           </Button>
         </CardActions>
       </Card>
@@ -117,7 +115,7 @@ const CardDisplay = ({data, width}) => {
               {data.body}
             </DialogContentText>
             :
-            null
+            <></>
           }
           <div className={classes.video}>
           {data.video ? 
@@ -126,7 +124,7 @@ const CardDisplay = ({data, width}) => {
               controls
               width={data.languages ? '65%' : '65%'}
               height={data.languages ? '65%' : '450px'}
-              /> : null}
+              /> : <></>}
           </div>
         </DialogContent>
         <DialogActions>

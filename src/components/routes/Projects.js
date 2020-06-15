@@ -1,13 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import PageInfo from './PageInfo.js';
+import PageInfo from '../display/PageInfo.js';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import { programmingLanguages, tooling } from './ProgrammingData.js';
-import ChipList from './ChipList.js';
-import CardDisplay from './CardDisplay.js';
-import {projectData} from './ProgrammingData.js';
+import { projectData, programmingLanguages, tooling } from '../../data/ProgrammingData.js';
+import ChipList from '../display/ChipList.js';
+import CardDisplay from '../display/CardDisplay.js';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +30,7 @@ const Projects = () => {
 
   const classes = useStyles();
 
-  const body = 'I always had an interest in programming but was too scared to try it out. It wasn\'t until my second semester in McGill\'s Faculty of Management that I took a programming course. Ever since then I\'ve gained a love for building things with code and spent two years changing faculties so I could pursue this passion. Ever since then, I\'ve worked on a variety of projects related to my interests. Check out some of them below!';
+  const body = 'I always had an interest in programming but didn\'t get an opportunity to try it out until I took an intro to Java class in my second semester at McGill\'s Faculty of Management. After taking that class I gained a love for building things with code and spent two years changing faculties so I could pursue this passion. Ever since then I\'ve worked on a variety of projects related to my interests. Check out some of them below!';
   const title = 'Projects and Skills';
 
   return (
@@ -41,7 +40,7 @@ const Projects = () => {
         <Grid
           container
           direction="row"
-          justify="flexStart"
+          justify="flex-start"
           spacing={3}
         >
         {

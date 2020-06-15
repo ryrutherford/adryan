@@ -2,7 +2,7 @@ import React from 'react';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import PlaceMarkers from './PlaceMarkers.js';
 import { makeStyles } from '@material-ui/core/styles';
-import locationData from './LocationData.js';
+import locationData from '../../data/LocationData.js';
 
 const containerStyle = {
   width: '90%',
