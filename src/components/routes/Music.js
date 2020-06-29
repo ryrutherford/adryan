@@ -41,24 +41,23 @@ const Music = () => {
           params: {
             part: 'snippet',
             playlistId: uploadsID,
-            maxResult: 6,
+            maxResults: 10,
             key: process.env.REACT_APP_GOOGLE_API_KEY,
           },
         })
           .then((response) => {
-            const videoIDs = response.data.items.map((item) => item.snippet.resourceId.videoId);
+            let videoIDs = response.data.items.map((item) => item.snippet.resourceId.videoId);
             axios({
               baseURL: 'https://www.googleapis.com/youtube/v3/videos',
               method: 'get',
               params: {
                 part: 'snippet,player',
                 id: videoIDs.join(','),
-                maxResult: 10,
+                maxResults: 10,
                 key: process.env.REACT_APP_GOOGLE_API_KEY,
               },
             })
               .then((response) => {
-                console.log(response);
                 const videoInfo = response.data.items.map((item) => {
                   return {
                     titleImg: item.snippet.thumbnails.maxres ? item.snippet.thumbnails.maxres.url : item.snippet.thumbnails.high.url ,
