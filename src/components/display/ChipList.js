@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(0.5),
     margin: 0,
     overflowX: 'auto',
+    maxWidth: '80vw',
     '&::-webkit-scrollbar': {
       width: '0.4em'
     },
@@ -43,7 +44,7 @@ const ChipList = ({chiplist, elevation}) => {
   const classes = useStyles();
 
   return (
-    <Paper component="ul" className={elevation === 0 ? classes.paperScroll : classes.paper} elevation={elevation}>
+    <Paper component="ul" className={elevation === 0 ? classes.paperScroll : classes.paperScroll/*classes.paper*/} elevation={elevation}>
       {chiplist.map((chip, index) => {
         return (
           <li key={index}>
